@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Accept Cookies",
+  "version": "1.0",
+  "description": "Automatically accepts cookie consent banners",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "host_permissions": ["<all_urls>"]
+}
